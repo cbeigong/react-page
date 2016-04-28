@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<title>for yanyan</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="Swiper-3.3.1/dist/css/swiper.min.css">
+
+
+
+
+</head>
+<body>
+
+<!-- 	<div id="content"></div>
+ -->	<div class="swiper-container" id="swipper-con"></div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="Swiper-3.3.1/dist/js/swiper.min.js"></script>
+
+	    <script type="text/babel">
+    	var HelloWorld = React.createClass({
+    		render : function() {
+    			return (
+    				<section className="hello">
+						{this.props.children}    					
+    				</section>
+    				);
+    		}
+    	});
+    	var ImageText = React.createClass({
+    		render : function() {
+    			return (
+    				<div className="swiper-image">
+    					
+    				</div>
+    				);
+    		}
+    	});
+    	// 新建立swipper class
+    	var Swipper = React.createClass({
+    		componentDidMount : function() {
+    			console.log("hello");
+    		{/* 组件跟你要new的对象不能一样 不然调用的话 就会错误*/}
+    			var swiper = new Swiper('.swiper-container',{
+    				direction : 'vertical'
+    			});
+    			console.log("world");
+    		},
+    		render : function() {
+    			return (
+    				<div className="swiper-wrapper">	
+    				   	<div className="swiper-slide">11</div>			
+    					<div className="swiper-slide">22</div>			
+    					<div className="swiper-slide">33</div>			
+    					<div className="swiper-slide">44</div>				
+    				</div>
+    				);
+    		}
+    	});
+
+    	// ReactDOM.render(
+    	// 	<HelloWorld>HelloWorld  !</HelloWorld>
+    	// 	,document.getElementById('content')
+    	// 	);
+
+    	ReactDOM.render(
+    			<Swipper />
+    			,document.getElementById('swipper-con')
+    		);
+
+    </script>
+</body>
+</html>
